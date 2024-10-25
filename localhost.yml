@@ -1,0 +1,9 @@
+---
+- name: Get the IP of the local host
+  hosts: localhost
+  tasks:
+          - name: Test Connectivity
+            ping:
+          - name: "Print Output."
+            debug: msg="Allright !!!"
+

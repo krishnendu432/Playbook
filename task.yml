@@ -1,0 +1,11 @@
+--- # Target and task playbook in ansible. It will install the package in the nodes.
+- hosts: demo
+  user: ubuntu
+  connection: ssh
+  become: yes
+  tasks:
+          - name: Install wget package to all other nodes.
+            action: apt name=wget state=present
+          #- name: Install wget package to all other nodes.
+          #action: apt name=wget state=present
+

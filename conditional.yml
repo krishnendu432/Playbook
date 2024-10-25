@@ -1,0 +1,14 @@
+--- # This is conditional playbook
+- hosts: demo
+  user: ubuntu
+  connection: ssh
+  become: yes
+  tasks:
+          - name: Install zip-unzip package in Debian type system
+            command: apt-get install zip unzip -y
+            when: ansible_os_family == "Debian"
+          - name: Install zip-unzip package in Red Hat type system
+            command: yum install zip unzip -y
+            when: ansible_os_family == "RedHat"
+                       
+

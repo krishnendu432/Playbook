@@ -1,0 +1,8 @@
+--- #  Playbook to install nodejs
+- hosts: demo
+  connection: ssh
+  become: yes
+  user: ubuntu
+  roles:
+          - myservice
+

@@ -1,0 +1,14 @@
+---
+# Variable playbook to install tree package
+- hosts: demo
+  user: ubuntu
+  connection: ssh
+  become: yes
+  vars:
+          pkgname: tree
+
+  tasks:
+                   - name: Install tree package on Linux system
+                     apt:
+                       name: "{{ pkgname }}"
+                       state: present

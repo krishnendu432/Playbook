@@ -1,0 +1,18 @@
+--- # adding multiple users in nodes
+- hosts: demo
+  user: ubuntu
+  become: yes
+  connection: ssh
+  tasks:
+          - name: adding multiple users in ubuntu
+            user: name='{{item}}' state=present
+            with_items:
+                    - Rajat
+                    - Chinnapa
+                    - Balaram
+                    - Vikas
+
+                  
+
+
+           

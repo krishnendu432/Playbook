@@ -1,0 +1,4 @@
+- name: install nodejs in ubuntu system
+  apt:
+          name: nodejs
+          state: present

@@ -1,0 +1,7 @@
+--- # My 1st testing YAML playbook in ansible. It will show IP address of the nodes.
+- hosts: demo
+  user: ubuntu
+  become: yes
+  connection: ssh
+  gather_facts: yes
+

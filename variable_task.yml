@@ -1,0 +1,10 @@
+--- # Variale playbook to install tree package
+- hosts: demo
+  user: ubuntu
+  connection: ssh
+  become: yes
+  vars:
+          pkgname: tree
+  task: 
+         
+  

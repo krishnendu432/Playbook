@@ -1,0 +1,12 @@
+--- # my playbook for handlers
+- hosts: demo
+  user: ubuntu
+  become: yes
+  connection: ssh
+  tasks:
+        - name: install apach2 server and start in ununtu
+          action: apt name=apach2 state=present
+          notify: restart apache2
+  handlers:
+          - name: restart apache2
+            action: service name=apache2 state=restarted 
